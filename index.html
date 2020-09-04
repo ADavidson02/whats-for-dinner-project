@@ -2,9 +2,34 @@
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <img src="/Users/amandadavidson/turing/mod_1/projects_1/whats-for-dinner/assets/burger-friends.jpg" id="bg" alt="background">
   </head>
   <body>
-    
+    <h2 class="banner">
+      <label class="whats-for-dinner"> What's for dinner</label>
+      <button class="add-recipe">ADD A RECIPE</button>
+    </h2>
+    <main class="flex-container">
+    <div class="flex-child-left"
+        <label class="looking-for">What are you looking for?</label>
+        <ul class="options">
+        <div class='side'><input type="radio" name="type"><label>Side</label></div>
+        <div class='main-dish'><input type="radio" name="type"><label>Main Dish</label></div>
+        <div class='dessert'><input type="radio" name="type"><label>Dessert</label></div>
+        <div class='entie-meal'><input type="radio" name="type"><label>Entire Meal</label></div>
+        </ul>
+        <button type="submit" class="lets-cook"> Let's Cook!</button>
+    </div>
+    <div class="flex-child-right">
+      <img class= "pot" src='./assets/cookpot.svg' alt='cooking pot'>
+    </div>
+      <section class="results"></section>
+    </main>
+  <!-- <div class="new-recipe-bar">
+        <label>Recipe Type:</label><input type="text" size="10" class="new-type">
+        <label>Recipe Name:</label><input typer="text" size="10" class="new-recipe">
+        <button type="click" class="add-new">ADD NEW</button>
+      </div> -->
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
