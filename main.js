@@ -1,5 +1,5 @@
 var side = [
-  'Miso Glazed Carrots'
+  'Miso Glazed Carrots',
   'Coleslaw',
   'Garden Salad',
   'Crispy Potatoes',
@@ -48,28 +48,61 @@ var dessert = [
   'Eclairs'
 ];
 
+//querySelector
+var letsCook = document.querySelector(".lets-cook"); 
+var homeView = document.querySelector(".homeView");
+var results = document.querySelector(".results");
+var clear = document.querySelector(".clear");
+var resultsText = document.querySelector(".resultsText");
+
+//eventListener
+letsCook.addEventListener("click", getOption);
+
+
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
+
 function getOption() {
-  if(document.getElementById('food_side').checked) {
-     getRandomIndex(side) = randomValue;
-  }else if(document.getElementById('food_maindish').checked) {
-     getRandomIndex(main) = randomValue;
-  }else if(document.getElementById('food_dessert').checked) {
-    getRandomIndex(dessert) = randomValue;
+  var foodChoice = document.querySelectorAll(".food");
 
+  for(var i = 0; i < foodChoice.length; i++) {
+    if (foodChoice[0].checked == true) {
+      console.log("hiiiii");
+        getSide();
+    } else if (foodChoice[1].checked == true) {
+      console.log("hello")
+      getMain();
+    }else if (foodChoice[2].checked == true) {
+      console.log("howdy")
+      getDessert();
+    }
+    displayResults(randomChoice);
+  }
+} 
 
-function displayResults() {
-  pot.classList.add("hidden");
-  results.classList.remove("hidden");
-  clear.classList.remove("hidden");
-  
+function getSide() {
+  randomChoice = side[getRandomIndex(side)];
+  console.log("hi");
+  return randomChoice;
 }
 
-//buttons
-var letsCook = document.querySelector("lets-cook"); 
+function getMain() {
+  randomChoice = main[getRandomIndex(main)];
+  console.log("ho");
+  return randomChoice;
+}
 
-//eventListener
+function getDessert() {
+  randomChoice = dessert[getRandomIndex(dessert)];
+  console.log("he");
+  return randomChoice;
+  }
 
-letsCook.addEventListener("click", getOption);
+
+function displayResults(randomChoice) {
+  homeView.classList.add("hidden");
+  results.classList.remove("hidden");
+  clear.classList.remove("hidden");
+  resultsText.innerText = randomChoice;
+}
