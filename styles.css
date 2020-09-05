@@ -20,24 +20,27 @@ z-index: -1;
 
 .banner{
   background-color: #0fb9b1;
+  position: absolute;
+  top: 0px;
+  left: 0px; 
+  right: 0px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  text-align: center;
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
   padding: 5px;
 }
-.add-recipe{
-  background-color: rgba(225, 225, 225, .9);
-  color: black;
-  border-radius: 5px;
-  margin: 20px;
-  border: none;
-}
+
 
 body{
   font-family: 'Roboto', 'sans-sans-serif';
   color: black;
 }
 .flex-container{
+  margin-top: 100px;
   display: inline-flex;
   flex-direction: row;
   justify-content: space-around;
@@ -74,6 +77,24 @@ body{
   display: flex;
   align-self: flex-start;
 }
+
+.add-recipe{
+  background-color: rgba(225, 225, 225, .9);
+  color: black;
+  border-radius: 5px;
+  margin: 20px;
+  border: none;
+  align-items: flex-end;
+}
+
+.clear{
+  background-color: #95a5a6;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  margin: 20px;
+}
+
 .pot{
   width: 100px;
   align-items: center;

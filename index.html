@@ -13,17 +13,23 @@
     <div class="flex-child-left"
         <label class="looking-for">What are you looking for?</label>
         <ul class="options">
-        <div class='side'><input type="radio" name="type"><label>Side</label></div>
-        <div class='main-dish'><input type="radio" name="type"><label>Main Dish</label></div>
-        <div class='dessert'><input type="radio" name="type"><label>Dessert</label></div>
-        <div class='entie-meal'><input type="radio" name="type"><label>Entire Meal</label></div>
+        <div><input type="radio" name="type">
+        <label id="food_side">Side</label></div>
+        <div><input type="radio" name="type">
+        <label id="food_maindish">Main Dish</label></div>
+        <div><input type="radio" name="type">
+        <label id="food_dessert">Dessert</label></div>
+        <div><input type="radio" name="type">
+        <label id="food_meal">Entire Meal</label></div>
         </ul>
         <button type="submit" class="lets-cook"> Let's Cook!</button>
     </div>
     <div class="flex-child-right">
       <img class= "pot" src='./assets/cookpot.svg' alt='cooking pot'>
+      <section class="results" hidden>You should make:</section>
+      <div class="results" hidden></div>
+      <button class="clear" hidden>CLEAR</button>
     </div>
-      <section class="results"></section>
     </main>
   <!-- <div class="new-recipe-bar">
         <label>Recipe Type:</label><input type="text" size="10" class="new-type">
