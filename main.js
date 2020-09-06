@@ -55,10 +55,12 @@ var results = document.querySelector(".results");
 var clear = document.querySelector(".clear");
 var resultsText = document.querySelector(".resultsText");
 var resultsView = document.querySelector("#resultsView");
+var clearButton = document.querySelector(".clear");
+
 
 //eventListener
 letsCook.addEventListener("click", getOption);
-
+clearButton.addEventListener("click", getOption);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -68,7 +70,7 @@ function getOption() {
   var foodChoice = document.querySelectorAll(".food");
   for(var i = 0; i < foodChoice.length; i++) {
     if (foodChoice[0].checked == true) {
-        getSide();
+      getSide();
     } else if (foodChoice[1].checked == true) {
       getMain();
     }else if (foodChoice[2].checked == true) {
@@ -79,11 +81,13 @@ function getOption() {
       var side = getSide();
       var dessert = getDessert();
         randomChoice = `${main} with a side of ${side} and ${dessert} for dessert!` 
-    }
-    displayResults(randomChoice);
+      } else {
+        randomChoice = "one of our delicious options. Please choose what you are looking for"
+      }
   }
-} 
-
+  displayResults(randomChoice);
+}
+    
 function getSide() {
   randomChoice = side[getRandomIndex(side)];
   return randomChoice;
@@ -99,9 +103,12 @@ function getDessert() {
   return randomChoice;
   }
 
-
 function displayResults(randomChoice) {
   homeView.classList.toggle("hidden");
   resultsView.classList.toggle("hidden");
-  resultsText.innerText = `${randomChoice}`;
+  resultsText.innerText = `${randomChoice}!`;
 }
+function clearSelection() {
+  homeView.classList.toggle("hidden");
+}
+
