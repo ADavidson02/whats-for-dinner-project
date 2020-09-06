@@ -79,10 +79,10 @@ function getOption() {
       var side = getSide();
       var dessert = getDessert();
         randomChoice = `${main} with a side of ${side} and ${dessert} for dessert!` 
-      }
     }
     displayResults(randomChoice);
   }
+} 
 
 function getSide() {
   randomChoice = side[getRandomIndex(side)];
