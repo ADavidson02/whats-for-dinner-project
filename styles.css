@@ -20,50 +20,61 @@ z-index: -1;
 
 .banner{
   background-color: #0fb9b1;
+  position: absolute;
+  top: 0px;
+  left: 0px; 
+  right: 0px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px;
 }
-.add-recipe{
-  background-color: rgba(225, 225, 225, .9);
-  color: black;
-  border-radius: 5px;
-  margin: 20px;
-  border: none;
-}
+
 
 body{
   font-family: 'Roboto', 'sans-sans-serif';
   color: black;
 }
 .flex-container{
-  display: inline-flex;
+  margin-top: 100px;
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: stretch;
 }
 
 .flex-child-left {
   background-color: rgba(225, 225, 225, .9);
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 200px;
-  height: 200px;
-  padding: 30px;
-  margin-right: 50px;
+  padding: 100px;
+  margin-right: 20px;
 }
+
 .flex-child-right {
   background-color: rgba(225, 225, 225, .9);
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 200px;
-  padding:30px;
-  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+}
 
+#resultsView {
+  display: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 100px;
+}
+.hidden {
+  height: 0;
+  width: 0;
+  visibility: hidden;
 }
 
 .lets-cook {
@@ -74,10 +85,28 @@ body{
   display: flex;
   align-self: flex-start;
 }
-.pot{
-  width: 100px;
-  align-items: center;
 
+.add-recipe{
+  background-color: rgba(225, 225, 225, .9);
+  color: black;
+  border-radius: 5px;
+  margin: 20px;
+  border: none;
+  align-items: flex-end;
+}
+
+.clear{
+  background-color: #95a5a6;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  margin: 20px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.homeView{
+  width: 100px;
 }
 
 .new-recipe{
