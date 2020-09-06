@@ -74,6 +74,11 @@ function getOption() {
     }else if (foodChoice[2].checked == true) {
       console.log("howdy")
       getDessert();
+    } else if (foodChoice[3].checked == true) {
+      var main = getMain();
+      var side = getSide();
+      var dessert = getDessert();
+        randomChoice = `${main} with a side of ${side} and ${dessert} for dessert!` 
     }
     displayResults(randomChoice);
   }
