@@ -32,7 +32,6 @@ z-index: -1;
   padding: 5px;
 }
 
-
 body{
   font-family: 'Roboto', 'sans-sans-serif';
   color: black;
@@ -50,7 +49,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: stretch;
   padding: 100px;
   margin-right: 20px;
 }
@@ -59,16 +58,18 @@ body{
   background-color: rgba(225, 225, 225, .9);
   display: flex;
   flex-direction: column;
-  padding: 100px;
+  justify-content: center;
+  align-items: stretch;
 }
 
 #resultsView {
-  display: relative;
+  display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: stretch;
   padding: 100px;
 }
+
 .hidden {
   height: 0;
   width: 0;
@@ -102,23 +103,48 @@ body{
   right: 0px;
   bottom: 0px;
 }
+.options {
+  align-self: flex-start; 
+}
+
+.required {
+  color: #ee5253;
+}
 
 .homeView{
   width: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding:100px;
 }
 
 .new-recipe{
   margin: 5px;
 }
-.new-recipe{
-  flex: column-reverse;
+.new-recipe-bar{
+  /* flex: column-reverse;
   background-color: rgba(225, 225, 225, .9);
   justify-content: flex-start;
-  align-items: center;
+  align-items: space-between;
   padding: 10px;
   height: 50px;
   font: black;
-  margin: 20px 20px 0 60px;
+  margin: 20px 20px 0 60px; */
+  background-color: rgba(225, 225, 225, .9);
+  position: absolute;
+  bottom: 0px;
+  left: 0px; 
+  right: 0px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
 }
 
 
