@@ -15,7 +15,10 @@ top: 0;
 left: 0;
 z-index: -1;
 }
-
+body{
+  font-family: 'Roboto', 'sans-sans-serif';
+  color: black;
+}
 .banner{
   background-color: #0fb9b1;
   position: absolute;
@@ -23,19 +26,16 @@ z-index: -1;
   left: 0px; 
   right: 0px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
   text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px;
+}
+.whats-for-dinner {
+  padding-left: 16px;
 }
 
-body{
-  font-family: 'Roboto', 'sans-sans-serif';
-  color: black;
-}
+
 .flex-container{
   margin-top: 100px;
   display: flex;
@@ -46,20 +46,27 @@ body{
 
 .flex-child-left {
   background-color: rgba(225, 225, 225, .9);
+  height: 350px;
+  width:430px; 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: stretch;
-  padding: 100px;
-  margin-right: 20px;
+  align-items: flex-start;
+  padding-left: 45px;
+  margin-right: 10px;
+  padding-top:38px;
 }
-
 .flex-child-right {
   background-color: rgba(225, 225, 225, .9);
+  height: 370px;
+  width:430px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 53px;
 }
 
 #resultsView {
@@ -67,9 +74,30 @@ body{
   flex-direction: column;
   justify-content: space-around;
   align-items: stretch;
-  padding: 100px;
 }
+.lookin-for {
+  display: relative;
+  top: 15px
+  font-size: 20px;
+}
+.results-Title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  size: 31px;
+  top: 42px;
+  font-style: italic;
+  margin-bottom: 18px;
+}
+.resultsText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  size: 20px;
 
+}
 .hidden {
   height: 0;
   width: 0;
@@ -78,10 +106,11 @@ body{
 
 .lets-cook {
   background-color: #0fb9b1;
-  padding: 5px 40px 5px 40px;
-  border-radius: 5px;
+  padding: 8px 54px;
+  border-radius: 4px;
   border: none;
-  display: flex;
+  top: -2px;
+  position: relative;
   align-self: flex-start;
 }
 
@@ -89,49 +118,64 @@ body{
   background-color: rgba(225, 225, 225, .9);
   color: black;
   border-radius: 5px;
-  margin: 20px;
+  margin: 15.9px;
   border: none;
   align-items: flex-end;
+  padding: 9px;
 }
 
 .clear{
   background-color: #95a5a6;
   color: white;
-  border-radius: 5px;
+  border-radius: 7px;
   border: none;
-  margin: 20px;
-  right: 0px;
-  bottom: 0px;
+  position: absolute;
+  align-items: flex-end;
+  top: 427px;
+  right: 57px;
+  padding: 6px;
+  width: 7%;
+  text-align: center;
+  box-sizing: border-box;
+   
+}
+.add-new{
+  background-color: #0fb9b1;
+  color: black;
+  padding: 8px 11px 6px 12px;
+  border-radius: 4px;
+  border: none;
+  display: flex;
+  align-self: flex-start;
 }
 .options {
-  align-self: flex-start; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-start;
+  padding-left: 0px;
+}
+iput [type="radio"]{
+  padding: 0px;
+  font-size: 5px;
 }
 
 .required {
   color: #ee5253;
 }
 
-.homeView{
-  width: 100px;
+.homeView {
+  size: 80px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
-  padding:100px;
+  justify-content: center;
+  margin: -50px;
 }
 
 .new-recipe{
   margin: 5px;
 }
 .new-recipe-bar{
-  /* flex: column-reverse;
-  background-color: rgba(225, 225, 225, .9);
-  justify-content: flex-start;
-  align-items: space-between;
-  padding: 10px;
-  height: 50px;
-  font: black;
-  margin: 20px 20px 0 60px; */
   background-color: rgba(225, 225, 225, .9);
   position: absolute;
   bottom: 0px;
@@ -139,12 +183,17 @@ body{
   right: 0px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  padding: 5px;
+  padding: 15px;
+}
+.recipe-select {
+  padding-right: 5px;
+}
+.new-recipe {
+  margin-right: 12px;
+  margin-left: 4px;
 }
 
 
