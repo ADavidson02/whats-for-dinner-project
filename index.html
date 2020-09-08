@@ -10,36 +10,42 @@
       <button class="add-recipe">ADD A RECIPE</button>
     </h2>
     <main class="flex-container">
-    <div class="flex-child-left"
-        <label class="looking-for">What are you looking for?<required class="required">*</required></label>
+    <div class="flex-child-left">
+        <h2 class="looking-for">What are you looking for<span class="required">*</span></h2>
         <ul class="options">
         <div>
-        <input type="radio" name="type" class="food">Side</label></div>
+        <input type="radio" name="type" class="food" style = "margin-bottom: 20px; font: 5px;">Side</label></div>
         <div>
-        <input type="radio" name="type" class="food">Main Dish</label></div>
+        <input type="radio" name="type" class="food" style = "margin-bottom: 20px;">Main Dish</label></div>
         <div>
-        <input type="radio" name="type" class="food">Dessert</label></div>
+        <input type="radio" name="type" class="food" style = "margin-bottom: 20px;">Dessert</label></div>
         <div>
         <input type="radio" name="type" class="food">Entire Meal</label></div>
         </ul>
-        <button class="lets-cook"> Let's Cook!</button>
+        <button class="lets-cook"> LET'S COOK!</button>
     </div>
     <div class="flex-child-right">
       <div>
       <img class="homeView" src='./assets/cookpot.svg' alt="cooking pot">
       </div>
       <div id="resultsView" class="hidden">
-      <section class="results">You should make:</section>
-      <div class="resultsText"></div>
+      <section class="results-title">You should make:</section>
+      <div class="resultsText" style="font-size: 30px;"></div>
       <button class="clear">CLEAR</button>
       </div>
     </div>
     </main>
-  <div class="new-recipe-bar">
-        <label>Recipe Type:</label><input type="text" size="10" class="new-type">
-        <label>Recipe Name:</label><input typer="text" size="10" class="new-recipe">
+    <div class="new-recipe-bar hidden">
+        <label class="recipe-select" value="">Recipe Type:</label>
+        <select class="add-new-class">
+          <option placeholder="Pick One" disable selected>Pick one:</option>
+          <option id="newSide" class="new-recipe" value="side">Side</option>
+          <option id="newMain"class="new-recipe" value="main">Main Dish</option>
+          <option id="newDessert" class="new-recipe" value="dessert">Dessert</option>
+        </select>
+        <label>Recipe Name:<input id="new" type="text" size="10" class="new-recipe"></label>
         <button type="click" class="add-new">ADD NEW</button>
-      </div>
+    </div>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
